@@ -20,12 +20,17 @@ sites:
 
   # latest version of WordPress, can be used for client work and testing
   # Check the readme at https://github.com/Varying-Vagrant-Vagrants/custom-site-template
-  wordpress-one:
+  poc_lendistry-devel_net:
     skip_provisioning: false
     description: "A standard WP install, useful for building plugins, testing things, etc"
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     hosts:
-      - one.wordpress.test
+      - poc.lendistry-devel.net
+#    folders:
+#      public_html/:
+#        git:
+#          repo: git@github.com:jhammons-lendistry/lendops-poc.git
+#          overwrite_on_clone: true
     custom:
       wpconfig_constants:
         WP_DEBUG: true

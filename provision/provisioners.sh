@@ -34,6 +34,7 @@ function provisioner_end() {
   if [[ $PROVISION_SUCCESS -eq "0" ]]; then
     vvv_success " ✔ The <b>'${VVV_PROVISIONER_RUNNING}'</b><success> provisioner completed in </success><b>${elapsed}</b><success> seconds.</success>"
     rm -f "/vagrant/failed_provisioners/provisioner-${VVV_PROVISIONER_RUNNING}"
+    echo "" > "/srv/www/default/dashboard/php/blocks/sidebar/inclusivity.php"
   else
     vvv_error " ! The <b>'${VVV_PROVISIONER_RUNNING}'</b><error> provisioner ran into problems, the full log is available at <b>'${VVV_CURRENT_LOG_FILE}'</b><error>. It completed in <b>${elapsed}</b><error> seconds."
   fi
