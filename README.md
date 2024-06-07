@@ -33,6 +33,12 @@ $ vagrant ssh -c 'mysqldump poc_lendistry-devel_net' > database/sql/backups/poc_
 $ vagrant ssh -c 'mysqldump poc_lendistry-devel_net' > www/poc_lendistry-devel_net/public_html/poc_lendistry-devel_net.sql
 ```
 
+## Handling Site WordPress Customizatons
+
+See the www/ folder, for example the poc_lendistry-devel_net/ folder (its own git repository as described in config/config.yml).
+
+## Accessing Local VVV
+
 When it's done, visit [http://vvv.test](http://vvv.test).
 
 The online documentation contains more detailed [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/).
