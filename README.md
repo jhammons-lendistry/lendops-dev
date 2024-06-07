@@ -15,6 +15,24 @@ vagrant plugin install --local
 vagrant up --provision
 ```
 
+## Handling Database Backups & WordPress public_html Folders
+
+1. Edit config/config.yaml and set the folders directive for public_html;
+2. Set the repo to a repository with the base public_html/ folder of WordPress files/content/etc.
+3. Ensure you have or create a backup of the MySQL database (either from existing git repo or generated yourself) by placing it in databases/sql/backup/poc_lendistry-devel_net.sql for Vagrant provisioning.
+
+Export a database from a running (local VM) site like so:
+
+```
+$ vagrant ssh -c 'mysqldump poc_lendistry-devel_net' > database/sql/backups/poc_lendistry-devel_net.sql
+```
+
+... or to store it in the git repo (to push to staging, for example):
+
+  ```
+$ vagrant ssh -c 'mysqldump poc_lendistry-devel_net' > www/poc_lendistry-devel_net/public_html/poc_lendistry-devel_net.sql
+```
+
 When it's done, visit [http://vvv.test](http://vvv.test).
 
 The online documentation contains more detailed [installation instructions](https://varyingvagrantvagrants.org/docs/en-US/installation/).
