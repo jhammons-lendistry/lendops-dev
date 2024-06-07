@@ -23,7 +23,7 @@ sites:
   poc_lendistry-devel_net:
     skip_provisioning: false
     description: "A standard WP install, useful for building plugins, testing things, etc"
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    repo: https://github.com/jhammons-lendistry/lendops-site-template.git
     hosts:
       - poc.lendistry-devel.net
 #    folders:
