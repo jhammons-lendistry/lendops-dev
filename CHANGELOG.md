@@ -6,7 +6,18 @@ permalink: /docs/en-US/changelog/
 
 # Changelog
 
-## 3.13 ( 2024 TBA )
+## 3.14 ( 2024 TBA )
+
+### Enhancements
+
+* VVV now shows a missing dashboard page with help when `www/default/index.php` is accidentally deleted instead of a HTTP forbidden error ( #2714 )
+
+### Bug Fixes
+
+* VVV will check if Docker is installed before defaulting to it on Arm64/Apple Silicon ( #2715 )
+* Fixed MySQL issues in GitHub Actions ( #2716 )
+
+## 3.13.1 ( 2024 June 16th )
 
 ### Enhancements
 
@@ -22,14 +33,17 @@ permalink: /docs/en-US/changelog/
 
 ### Maintenance
 
-* Switch the Parallels Arm64 box from `mpasternak/focal64-arm` to `bento/ubuntu-22.04-arm64` to match x86 boxes ( #2695 )
+* Switch the Parallels Arm64 box from `mpasternak/focal64-arm` to `bento/ubuntu-20.04-arm64` to match x86 boxes ( #2695 )
 
 ### Bug Fixes
 
 * The host file inside the VM was only adding sites with `127.0.0.1` addresses, now it adds the IPVv6 `::1` too ( #2689 )
+* Fixes for hosts file cleanup ( #2708 )
 * Removed old MacOS PR workflows, no runners available ( #2698 )
+* Replace an outdated Nginx signing key ( #2710 )
+* Don't sync clocks when using the docker provider ( #2711 )
 
-## 3.12 ( 2023 August 3rd )
+## 3.12.1 ( 2023 August 3rd )
 
 ### Enhancements
 
